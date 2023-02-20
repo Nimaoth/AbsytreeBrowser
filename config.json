@@ -10,6 +10,16 @@
       "filename": "./temp/test.js",
       "ast": false,
       "languageID": "javascript"
+    },
+    {
+      "filename": "./temp/test.py",
+      "ast": false,
+      "languageID": "javascript"
+    },
+    {
+      "filename": "./temp/test.rs",
+      "ast": false,
+      "languageID": "javascript"
     }
   ]
 }

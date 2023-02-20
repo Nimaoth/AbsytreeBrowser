@@ -1,0 +1,46 @@
+{
+  "editor": {
+    "restore-open-editors": true,
+    "text": {
+      "cursor": {
+        "movement": {
+          "": "both",
+          "move-to": "both",
+          "move-before": "both",
+          "move": "both",
+          "visual": "last",
+          "visual-temp": "last-to-first"
+        },
+        "wide": {
+          "": true,
+          "move-to": true,
+          "move-before": true,
+          "move": true,
+          "insert": false,
+          "visual": true,
+          "visual-temp": false
+        }
+      },
+      "move-inside": false,
+      "treesitter": {
+        "javascript": {
+        },
+        "python": {
+        }
+      }
+    },
+    "custom-mode-on-top": false,
+    "frame-time-smoothing": 0.8
+  },
+  "ast": {
+    "scroll-speed": 60
+  },
+  "text": {
+    "move-command-count": 0,
+    "move-action": "",
+    "move-next-mode": "",
+    "scroll-speed": 23,
+    "cursor-margin": 50,
+    "move-count": 0
+  }
+}

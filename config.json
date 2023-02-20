@@ -1,0 +1,15 @@
+{
+  "theme": "./themes/tokyo-night-storm-color-theme.json",
+  "fontSize": 20.0,
+  "fontRegular": "./fonts/DejaVuSansMono.ttf",
+  "fontBold": "./fonts/DejaVuSansMono-Bold.ttf",
+  "fontItalic": "./fonts/DejaVuSansMono-Oblique.ttf",
+  "fontBoldItalic": "./fonts/DejaVuSansMono-BoldOblique.ttf",
+  "openEditors": [
+    {
+      "filename": "./temp/test.js",
+      "ast": false,
+      "languageID": "javascript"
+    }
+  ]
+}

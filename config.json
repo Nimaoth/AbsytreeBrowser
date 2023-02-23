@@ -12,12 +12,7 @@
       "languageID": "javascript"
     },
     {
-      "filename": "./temp/test.py",
-      "ast": false,
-      "languageID": "javascript"
-    },
-    {
-      "filename": "./temp/test.rs",
+      "filename": "./config.js",
       "ast": false,
       "languageID": "javascript"
     }

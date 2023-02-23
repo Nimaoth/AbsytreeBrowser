@@ -54,14 +54,20 @@
     <script>
         const Parser = window.TreeSitter
 
+        function loadScript(url) {
+            let script = document.createElement("script")
+            script.setAttribute("src", url)
+            document.body.appendChild(script)
+        }
+
         let isEditorLoaded = false
         function loadEditor() {
             if (isEditorLoaded)
                 return
             isEditorLoaded = true
-            let script = document.createElement("script")
-            script.setAttribute("src", "ast.js")
-            document.body.appendChild(script)
+
+            loadScript("ast.js")
+            loadScript("scripting_runtime.js")
         }
 
         function loadFileSync(filePath) {

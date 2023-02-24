@@ -1,5 +1,7 @@
 console.log("lol")
 
+gEditor.openGithubWorkspace("Nimaoth", "Absytree", "main")
+
 addCommand("editor", "<A-h>", "load-current-config")
 addCommand("editor", "<A-g>", "sourceCurrentDocument")
 
@@ -71,3 +73,11 @@ addTextCommand("", "<C-t>", "select-next")
 addTextCommand("", "<C-n>", "invert-selection")
 addTextCommand("", "<C-y>", "undo")
 addTextCommand("", "<C-z>", "redo")
+
+addCommand("popup.selector", "<ENTER>", "accept")
+addCommand("popup.selector", "<TAB>", "accept")
+addCommand("popup.selector", "<ESCAPE>", "cancel")
+addCommand("popup.selector", "<UP>", "prev")
+addCommand("popup.selector", "<DOWN>", "next")
+addCommand("popup.selector", "<HOME>", "home")
+addCommand("popup.selector", "<END>", "end")

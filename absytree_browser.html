@@ -81,11 +81,12 @@
             return result || "";
         }
 
-        function getAsyncJs(url) {
+        function getAsyncJs(url, authToken) {
             return new Promise((resolve, reject) => {
                 var result = null;
                 var xmlhttp = new XMLHttpRequest();
                 xmlhttp.open("GET", url, true);
+                xmlhttp.setRequestHeader("Authorization", authToken)
                 xmlhttp.onload = () => {
                     resolve(xmlhttp.responseText || "")
                 }

@@ -1,6 +1,6 @@
 console.log("lol")
 
-gEditor.openGithubWorkspace("Nimaoth", "Absytree", "main")
+gEditor.openGithubWorkspace("Nimaoth", "AbsytreeBrowser", "main")
 
 addCommand("editor", "<A-h>", "load-current-config")
 addCommand("editor", "<A-g>", "sourceCurrentDocument")

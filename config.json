@@ -12,7 +12,7 @@
       "languageID": "javascript"
     },
     {
-      "filename": "./config.js",
+      "filename": "config.js",
       "ast": false,
       "languageID": "javascript"
     }

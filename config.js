@@ -1,6 +1,7 @@
 console.log("lol")
 
-gEditor.openGithubWorkspace("Nimaoth", "AbsytreeBrowser", "main")
+// gEditor.openGithubWorkspace("Nimaoth", "AbsytreeBrowser", "main")
+gEditor.openAbsytreeServerWorkspace("http://localhost:3000")
 
 addCommand("editor", "<A-h>", "load-current-config")
 addCommand("editor", "<A-g>", "sourceCurrentDocument")
@@ -27,6 +28,10 @@ addCommand("editor", "<CS-r>", "load-file")
 addCommand("editor", "<S-SPACE><S-SPACE>", "command-line")
 addCommand("editor", "<S-SPACE>t", "choose-theme")
 addCommand("editor", "<S-SPACE>f", "choose-file", "new")
+addCommand("editor", "<S-SPACE>s", "write-file")
+addCommand("editor", "<S-SPACE>SS", "write-file", "", true)
+addCommand("editor", "<S-SPACE>SA", "save-app-state")
+addCommand("editor", "<S-SPACE>SC", "remove-from-local-storage")
 
 // addCommand("editor", "<S-SPACE>kn", () => loadNormalBindings())
 // addCommand("editor", "<S-SPACE>kv", () => loadVimBindings())

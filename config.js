@@ -1,10 +1,51 @@
 console.log("lol")
 
-// gEditor.openGithubWorkspace("Nimaoth", "AbsytreeBrowser", "main")
-gEditor.openAbsytreeServerWorkspace("http://localhost:3000")
+// Open a git hub repository workspace
+// This allows you to browse the files in this repository at the specified branch or commit (read only)
+// You can set the GithubAccessToken in local storage to a github token (bearer format), this will then be used
+// to authenticate any requests to the github api.
+gEditor.openGithubWorkspace("Nimaoth", "AbsytreeBrowser", "main")
 
-addCommand("editor", "<A-h>", "load-current-config")
-addCommand("editor", "<A-g>", "sourceCurrentDocument")
+// Open a absytree server workspace.
+// absytree_server.js must be running there, and it will serve the files in the directory it's running in (read-write access)
+// gEditor.openAbsytreeServerWorkspace("http://localhost:3000")
+
+window.handleGlobalAction = (action, args) => {
+    if (handleLambdaAction(action, args))
+        return true
+
+    // console.log("handleGlobalAction ", action, args)
+
+    switch (action) {
+    case "escape":
+        gEditor.getActiveEditor2().clearSelections()
+        return true
+    case "command-line":
+        gEditor.commandLine(args)
+        gEditor.getActiveEditor2().setMode("insert")
+        return true
+
+    case "set-search-query":
+        gEditor.getActiveEditor2().setSearchQuery(args)
+        return true
+
+    }
+    return false
+}
+
+window.handleUnknownPopupAction = (popup, action, args) => {
+    if (handleLambdaAction(action, args))
+        return true
+    // console.log("handleUnknownPopupAction ", popup, action, args)
+    return false
+}
+
+window.handleUnknownDocumentEditorAction = (editor, action, args) => {
+    if (handleLambdaAction(action, args))
+        return true
+    // console.log("handleUnknownDocumentEditorAction ", editor, action, args)
+    return false
+}
 
 addCommand("editor", "<S-SPACE>ff", "log-options")
 addCommand("editor", "<ESCAPE>", "escape")
@@ -20,8 +61,8 @@ addCommand("editor", "<CA-a>", "create-keybind-autocomplete-view")
 addCommand("editor", "<CA-x>", "close-current-view")
 addCommand("editor", "<CA-n>", "prev-view")
 addCommand("editor", "<CA-t>", "next-view")
-addCommand("editor", "<CS-n>", "move-current-view-prev")
-addCommand("editor", "<CS-t>", "move-current-view-next")
+addCommand("editor", "<CA-s>", "move-current-view-prev")
+addCommand("editor", "<CA-d>", "move-current-view-next")
 addCommand("editor", "<CA-r>", "move-current-view-to-top")
 addCommand("editor", "<S-SPACE><S-SPACE>", "command-line")
 addCommand("editor", "<S-SPACE>t", "choose-theme")
@@ -63,8 +104,7 @@ addTextCommand("", "<S-UP>", "move-cursor-line -1 \"last\"")
 addTextCommand("", "<S-DOWN>", "move-cursor-line 1 \"last\"")
 addTextCommand("", "<S-HOME>", "move-first \"line\" \"last\"")
 addTextCommand("", "<S-END>", "move-last \"line\" \"last\"")
-addTextCommand("", "<CA-d>", "duplicate-last-selection")
-addTextCommand("", "<CA-d>", "duplicate-last-selection")
+addTextCommand("", "<A-d>", "duplicate-last-selection")
 addTextCommand("", "<CA-UP>", "add-cursor-above")
 addTextCommand("", "<CA-DOWN>", "add-cursor-below")
 addTextCommand("", "<BACKSPACE>", "delete-left")
@@ -76,8 +116,22 @@ addTextCommand("", "<A-UP>", "select-parent-current-ts")
 addTextCommand("", "<C-r>", "select-prev")
 addTextCommand("", "<C-t>", "select-next")
 addTextCommand("", "<C-n>", "invert-selection")
-addTextCommand("", "<C-y>", "undo")
-addTextCommand("", "<C-z>", "redo")
+addTextCommand("", "<C-z>", "undo")
+addTextCommand("", "<C-y>", "redo")
+
+addTextCommand("", "<C-f>", () => {
+    console.log("set-search-query")
+    gEditor.commandLine("set-search-query ")
+    gEditor.getActiveEditor2().moveLast("file", 0, true, 0)
+    gEditor.getActiveEditor2().setMode("insert")
+})
+
+addTextCommand("", "<A-n>", "select-move", "next-find-result")
+addTextCommand("", "<A-s>", "select-move", "prev-find-result")
+addTextCommand("", "<C-e>", "addNextFindResultToSelection")
+addTextCommand("", "<C-o>", "addPrevFindResultToSelection")
+addTextCommand("", "<A-e>", "setAllFindResultToSelection")
+addTextCommand("", "*", () => gEditor.getActiveEditor2().setSearchQueryFromMove("word"))
 
 addCommand("popup.selector", "<ENTER>", "accept")
 addCommand("popup.selector", "<TAB>", "accept")

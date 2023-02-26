@@ -11,7 +11,16 @@ function addCommand(context, keys, action, ...args) {
 function addCommandLambda(context, keys, lambda) {
     let key = context + keys
     lambdaActions[key] = lambda
-    gEditor.addCommandScript(context, keys, "lambda-action", key)
+    gEditor.addCommandScript(context, keys, "lambda-action", JSON.stringify(key))
+}
+
+function handleLambdaAction(action, args) {
+    if (action == "lambda-action" && args.length == 1 && typeof(lambdaActions[args[0]]) == "function") {
+        lambdaActions[args[0]]()
+        return true
+    }
+
+    return false
 }
 
 function addTextCommand(mode, keys, action, ...args) {

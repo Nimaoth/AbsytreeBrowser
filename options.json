@@ -1,6 +1,7 @@
 {
   "editor": {
     "restore-open-editors": true,
+    "restore-open-workspaces": true,
     "text": {
       "cursor": {
         "movement": {

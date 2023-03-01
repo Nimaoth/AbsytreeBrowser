@@ -11,22 +11,21 @@ gEditor.openGithubWorkspace("Nimaoth", "AbsytreeBrowser", "main")
 // gEditor.openAbsytreeServerWorkspace("http://localhost:3000")
 
 window.handleGlobalAction = (action, args) => {
+    console.log("handleGlobalAction ", action, args)
     if (handleLambdaAction(action, args))
         return true
-
-    // console.log("handleGlobalAction ", action, args)
 
     switch (action) {
     case "escape":
         gEditor.getActiveEditor2().clearSelections()
         return true
     case "command-line":
-        gEditor.commandLine(args)
+        gEditor.commandLine(args[0])
         gEditor.getActiveEditor2().setMode("insert")
         return true
 
     case "set-search-query":
-        gEditor.getActiveEditor2().setSearchQuery(args)
+        gEditor.getActiveEditor2().setSearchQuery(args[0])
         return true
 
     }
@@ -34,13 +33,14 @@ window.handleGlobalAction = (action, args) => {
 }
 
 window.handleUnknownPopupAction = (popup, action, args) => {
+    console.log("handleUnknownPopupAction ", popup, action, args)
     if (handleLambdaAction(action, args))
         return true
-    // console.log("handleUnknownPopupAction ", popup, action, args)
     return false
 }
 
 window.handleUnknownDocumentEditorAction = (editor, action, args) => {
+    console.log("handleUnknownDocumentEditorAction ", editor, action, args)
     if (handleLambdaAction(action, args))
         return true
     // console.log("handleUnknownDocumentEditorAction ", editor, action, args)
@@ -73,6 +73,19 @@ addCommand("editor", "<S-SPACE>SS", "write-file", "", true)
 addCommand("editor", "<S-SPACE>SA", "save-app-state")
 addCommand("editor", "<S-SPACE>SC", "remove-from-local-storage")
 addCommand("editor", "<S-SPACE>CC", "clear-workspace-caches")
+
+addCommandLambda("editor", "<S-SPACE>l<*-n>1", () => {
+    gEditor.scriptSetOptionString("editor.text.line-numbers", "none")
+    gEditor.requestRender(true)
+})
+addCommandLambda("editor", "<S-SPACE>l<*-n>2", () => {
+    gEditor.scriptSetOptionString("editor.text.line-numbers", "absolute")
+    gEditor.requestRender(true)
+})
+addCommandLambda("editor", "<S-SPACE>l<*-n>3", () => {
+    gEditor.scriptSetOptionString("editor.text.line-numbers", "relative")
+    gEditor.requestRender(true)
+})
 
 // addCommand("editor", "<S-SPACE>kn", () => loadNormalBindings())
 // addCommand("editor", "<S-SPACE>kv", () => loadVimBindings())
@@ -121,7 +134,7 @@ addTextCommand("", "<C-y>", "redo")
 
 addTextCommand("", "<C-f>", () => {
     console.log("set-search-query")
-    gEditor.commandLine("set-search-query ")
+    gEditor.commandLine("set-search-query \\")
     gEditor.getActiveEditor2().moveLast("file", 0, true, 0)
     gEditor.getActiveEditor2().setMode("insert")
 })

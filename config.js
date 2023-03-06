@@ -4,7 +4,7 @@ console.log("lol")
 // This allows you to browse the files in this repository at the specified branch or commit (read only)
 // You can set the GithubAccessToken in local storage to a github token (bearer format), this will then be used
 // to authenticate any requests to the github api.
-gEditor.openGithubWorkspace("Nimaoth", "AbsytreeBrowser", "main")
+gEditor.openGithubWorkspace("Nimaoth", "Absytree", "main")
 
 // Open a absytree server workspace.
 // absytree_server.js must be running there, and it will serve the files in the directory it's running in (read-write access)
@@ -145,6 +145,14 @@ addTextCommand("", "<C-e>", "addNextFindResultToSelection")
 addTextCommand("", "<C-o>", "addPrevFindResultToSelection")
 addTextCommand("", "<A-e>", "setAllFindResultToSelection")
 addTextCommand("", "*", () => gEditor.getActiveEditor2().setSearchQueryFromMove("word"))
+
+addTextCommand("completion", "<ESCAPE>", "hide-completions")
+addTextCommand("completion", "<UP>", "select-prev-completion")
+addTextCommand("completion", "<DOWN>", "select-next-completion")
+addTextCommand("completion", "<TAB>", "apply-selected-completion")
+addTextCommand("", "gd", "goto-definition")
+addTextCommand("", "<C-SPACE>", "get-completions")
+addTextCommand("", "<C-p>", "get-completions")
 
 addCommand("popup.selector", "<ENTER>", "accept")
 addCommand("popup.selector", "<TAB>", "accept")

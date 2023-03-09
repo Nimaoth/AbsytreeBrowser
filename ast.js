@@ -70971,16 +70971,16 @@ function renderVisualNode_3288334470(self_3288334471, app_3288334472, node_32883
     panel_3288334480.fillBackground = true;
     panel_3288334480.allowAlpha = true;
     panel_3288334480.drawBorder = true;
-    panel_3288334480.backgroundColor = nimCopy(panel_3288334480.backgroundColor, withAlpha_3288334358(color_3288334596(app_3288334472.theme, [105,110,112,117,116,86,97,108,105,100,97,116,105,111,110,46,105,110,102,111,66,111,114,100,101,114], rgb_2550136919(175, 175, 255)), 0.2), NTI2550136835);
-    panel_3288334480.foregroundColor = nimCopy(panel_3288334480.foregroundColor, color_3288334596(app_3288334472.theme, [105,110,112,117,116,86,97,108,105,100,97,116,105,111,110,46,105,110,102,111,66,111,114,100,101,114], rgb_2550136919(175, 175, 255)), NTI2550136835);
+    panel_3288334480.backgroundColor = nimCopy(panel_3288334480.backgroundColor, withAlpha_3288334358(color_3288334596(app_3288334472.theme, [102,111,114,101,103,114,111,117,110,100], rgb_2550136919(175, 175, 255)), 0.25), NTI2550136835);
+    panel_3288334480.foregroundColor = nimCopy(panel_3288334480.foregroundColor, color_3288334596(app_3288334472.theme, [102,111,114,101,103,114,111,117,110,100], rgb_2550136919(175, 175, 255)), NTI2550136835);
     }
     else {
     if ((!((node_3288334473.node == null)) && HEX3DHEX3D_2046820626(node_2969569717(self_3288334471).reff, node_3288334473.node.id))) {
     panel_3288334480.fillBackground = true;
     panel_3288334480.allowAlpha = true;
     panel_3288334480.drawBorder = true;
-    panel_3288334480.backgroundColor = nimCopy(panel_3288334480.backgroundColor, withAlpha_3288334358(color_3288334596(app_3288334472.theme, [105,110,112,117,116,86,97,108,105,100,97,116,105,111,110,46,119,97,114,110,105,110,103,66,111,114,100,101,114], rgb_2550136919(175, 255, 200)), 0.2), NTI2550136835);
-    panel_3288334480.foregroundColor = nimCopy(panel_3288334480.foregroundColor, color_3288334596(app_3288334472.theme, [105,110,112,117,116,86,97,108,105,100,97,116,105,111,110,46,119,97,114,110,105,110,103,66,111,114,100,101,114], rgb_2550136919(175, 255, 200)), NTI2550136835);
+    panel_3288334480.backgroundColor = nimCopy(panel_3288334480.backgroundColor, withAlpha_3288334358(color_3288334596(app_3288334472.theme, [105,110,112,117,116,86,97,108,105,100,97,116,105,111,110,46,105,110,102,111,66,111,114,100,101,114], rgb_2550136919(175, 255, 200)), 0.25), NTI2550136835);
+    panel_3288334480.foregroundColor = nimCopy(panel_3288334480.foregroundColor, color_3288334596(app_3288334472.theme, [105,110,112,117,116,86,97,108,105,100,97,116,105,111,110,46,105,110,102,111,66,111,114,100,101,114], rgb_2550136919(175, 255, 200)), NTI2550136835);
     }
     }
 
@@ -71133,7 +71133,7 @@ function renderVisualNodeLayout_3288335078(self_3288335079, app_3288335080, node
     if (contains_2969569828(layout_3288335083.nodeToVisualNode, node_2969569717(self_3288335079).id)) {
     var visualRange_3288335205 = nimCopy(null, HEX5BHEX5D_2969569924(layout_3288335083.nodeToVisualNode, node_2969569717(self_3288335079).id), NTI3087007774);
     var bounds_3288335206 = absoluteBounds_3087009580(visualRange_3288335205);
-    var panel_3288335228 = {left: bounds_3288335206.x, right: (bounds_3288335206.x + bounds_3288335206.w), top: bounds_3288335206.y, bottom: (bounds_3288335206.y + bounds_3288335206.h), fillBackground: true, drawBorder: true, allowAlpha: true, backgroundColor: withAlpha_3288334358(color_3288335207(app_3288335080.theme, [102,111,114,101,103,114,111,117,110,100], color_2550136904(1.0, 1.0, 1.0, 1.0)), 0.1), foregroundColor: color_3288334596(app_3288335080.theme, [102,111,114,101,103,114,111,117,110,100], rgb_2550136919(255, 255, 255)), m_type: NTI2785017868, maskContent: false, children: [], anchor: {Field0: ({x: 0.0, y: 0.0}), Field1: ({x: 0.0, y: 0.0})}, pivot: ({x: 0.0, y: 0.0}), lastBounds: ({x: 0.0, y: 0.0, w: 0.0, h: 0.0}), lastBoundsChange: 0, lastHierarchyChange: 0, lastInvalidationRect: ({x: 0.0, y: 0.0, w: 0.0, h: 0.0}), lastInvalidation: 0, sizeToContent: false, logLayout: false};
+    var panel_3288335228 = {left: bounds_3288335206.x, right: (bounds_3288335206.x + bounds_3288335206.w), top: bounds_3288335206.y, bottom: (bounds_3288335206.y + bounds_3288335206.h), fillBackground: true, drawBorder: true, allowAlpha: true, backgroundColor: withAlpha_3288334358(color_3288335207(app_3288335080.theme, [105,110,112,117,116,86,97,108,105,100,97,116,105,111,110,46,119,97,114,110,105,110,103,66,111,114,100,101,114], color_2550136904(1.0, 1.0, 1.0, 1.0)), 0.3), foregroundColor: color_3288334596(app_3288335080.theme, [105,110,112,117,116,86,97,108,105,100,97,116,105,111,110,46,119,97,114,110,105,110,103,66,111,114,100,101,114], rgb_2550136919(255, 255, 255)), m_type: NTI2785017868, maskContent: false, children: [], anchor: {Field0: ({x: 0.0, y: 0.0}), Field1: ({x: 0.0, y: 0.0})}, pivot: ({x: 0.0, y: 0.0}), lastBounds: ({x: 0.0, y: 0.0, w: 0.0, h: 0.0}), lastBoundsChange: 0, lastHierarchyChange: 0, lastInvalidationRect: ({x: 0.0, y: 0.0, w: 0.0, h: 0.0}), lastInvalidation: 0, sizeToContent: false, logLayout: false};
     insert_3288335053(widget_3288335091, "children", panel_3288335228, 0);
     }
     

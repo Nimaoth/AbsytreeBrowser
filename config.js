@@ -47,12 +47,6 @@ window.handleUnknownDocumentEditorAction = (editor, action, args) => {
     return false
 }
 
-setOption("ast.indent", 20)
-setOption("ast.indent-line-width", 2)
-setOption("ast.indent-line-alpha", 1)
-setOption("ast.inline-blocks", true)
-setOption("ast.vertical-division", true)
-
 addCommand("editor", "<S-SPACE><*-a>i", "toggle-flag", "ast.inline-blocks")
 addCommand("editor", "<S-SPACE><*-a>d", "toggle-flag", "ast.vertical-division")
 addCommand("editor", "<S-SPACE>ff", "log-options")

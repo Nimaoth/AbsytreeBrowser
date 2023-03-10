@@ -34,7 +34,12 @@
     "frame-time-smoothing": 0.8
   },
   "ast": {
-    "scroll-speed": 60
+    "scroll-speed": 60,
+    "indent": 20,
+    "inline-blocks": true,
+    "vertical-division": true,
+    "indent-line-width": 2,
+    "indent-line-alpha": 1
   },
   "text": {
     "move-command-count": 0,

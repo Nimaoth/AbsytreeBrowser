@@ -8,6 +8,11 @@ function addCommand(context, keys, action, ...args) {
     gEditor.addCommandScript(context, keys, action, argsString)
 }
 
+function setHandleInputs(context, handleInputs) {
+    // console.log("addCommand", context, "    ", keys, "    ", action)
+    gEditor.setHandleInputs(context, handleInputs)
+}
+
 function addCommandLambda(context, keys, lambda) {
     let key = context + keys
     lambdaActions[key] = lambda

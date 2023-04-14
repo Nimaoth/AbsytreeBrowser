@@ -33,6 +33,9 @@
     "custom-mode-on-top": false,
     "frame-time-smoothing": 0.8
   },
+  "model": {
+    "scroll-speed": 60
+  },
   "ast": {
     "scroll-speed": 60,
     "indent": 20,

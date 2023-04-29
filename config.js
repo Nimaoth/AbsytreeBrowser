@@ -326,4 +326,13 @@ addCommand("editor.model", "<ENTER>", "create-new-node")
 addCommand("editor.model", "<TAB>", "select-next-placeholder")
 addCommand("editor.model", "<S-TAB>", "select-prev-placeholder")
 
-addCommand("editor.model", "<CA-n>", "toggle-use-default-cell-builder")
+addCommand("editor.model", "<C-SPACE>", "show-completions")
+
+addCommand("editor.model", "<CA-g>", "toggle-use-default-cell-builder")
+
+addCommand("editor.model.completion", "<ENTER>", "finish-edit", true)
+addCommand("editor.model.completion", "<ESCAPE>", "hide-completions")
+addCommand("editor.model.completion", "<UP>", "select-prev-completion")
+addCommand("editor.model.completion", "<DOWN>", "select-next-completion")
+addCommand("editor.model.completion", "<C-SPACE>", "move-cursor-start")
+addCommand("editor.model.completion", "<TAB>", "apply-selected-completion")

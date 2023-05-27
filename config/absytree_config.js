@@ -156,6 +156,8 @@ addTextCommand("completion", "<TAB>", "apply-selected-completion")
 addTextCommand("", "<S-SPACE>gd", "goto-definition")
 addTextCommand("", "<C-SPACE>", "get-completions")
 addTextCommand("", "<C-p>", "get-completions")
+addTextCommand("", "<C-c>", "copy")
+addTextCommand("", "<C-v>", "paste")
 
 addCommand("popup.selector", "<ENTER>", "accept")
 addCommand("popup.selector", "<TAB>", "accept")

@@ -1,4 +1,4 @@
-console.log("lol")
+console.log("Loading absytree_config.js")
 
 // Open a git hub repository workspace
 // This allows you to browse the files in this repository at the specified branch or commit (read only)
@@ -11,7 +11,7 @@ gEditor.openGithubWorkspace("Nimaoth", "Absytree", "main")
 // gEditor.openAbsytreeServerWorkspace("http://localhost:3000")
 
 window.handleGlobalAction = (action, args) => {
-    console.log("js: handleGlobalAction ", action, args)
+    // console.log("js: handleGlobalAction ", action, args)
     if (handleLambdaAction(action, args))
         return true
 
@@ -34,14 +34,14 @@ window.handleGlobalAction = (action, args) => {
 }
 
 window.handleUnknownPopupAction = (popup, action, args) => {
-    console.log("js: handleUnknownPopupAction ", popup, action, args)
+    // console.log("js: handleUnknownPopupAction ", popup, action, args)
     if (handleLambdaAction(action, args))
         return true
     return false
 }
 
 window.handleUnknownDocumentEditorAction = (editor, action, args) => {
-    console.log("js: handleUnknownDocumentEditorAction ", editor, action, args)
+    // console.log("js: handleUnknownDocumentEditorAction ", editor, action, args)
     if (handleLambdaAction(action, args))
         return true
     // console.log("handleUnknownDocumentEditorAction ", editor, action, args)
@@ -51,3 +51,5 @@ window.handleUnknownDocumentEditorAction = (editor, action, args) => {
 addCommand("editor", "<S-SPACE>kn", "kb-normal")
 addCommand("editor", "<S-SPACE>kv", "kb-vim")
 addCommand("editor", "<S-SPACE>kh", "kb-helix")
+
+gEditor.setOption("editor.maxViews", 2)

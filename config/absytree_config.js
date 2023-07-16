@@ -17,7 +17,7 @@ window.handleGlobalAction = (action, args) => {
 
     switch (action) {
     case "escape":
-        gEditor.getActiveEditor2().clearSelections()
+        getActiveTextEditor(editor => editor.clearSelections())
         return true
     case "command-line":
         const str = args.len > 0 ? args[0] : ""

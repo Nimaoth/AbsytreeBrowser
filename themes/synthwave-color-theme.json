@@ -179,7 +179,7 @@
       "name": "Variable",
       "scope": ["variable", "entity.name.variable"],
       "settings": {
-        "foreground": "#ff7edb"
+        "foreground": "#fda1e3"
       }
     },
     {

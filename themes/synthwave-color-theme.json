@@ -54,7 +54,7 @@
     "tab.border": "#241b2f00",
     "tab.activeBorder": "#880088",
     "tab.inactiveBackground": "#262335",
-    "editor.background": "#262335",
+    "editor.background": "#211e2e",
     "editorLineNumber.foreground": "#ffffff73",
     "editorLineNumber.activeForeground": "#ffffffcc",
     "editorCursor.background": "#241b2f",
@@ -140,7 +140,7 @@
     "minimapGutter.addedBackground": "#09f7a099",
     "minimapGutter.modifiedBackground": "#b893ce",
     "minimapGutter.deletedBackground": "#fe4450",
-    "breadcrumbPicker.background": "#232530"
+    "breadcrumbPicker.background": "#412c44"
   },
   "tokenColors": [
     {
@@ -179,7 +179,7 @@
       "name": "Variable",
       "scope": ["variable", "entity.name.variable"],
       "settings": {
-        "foreground": "#fda1e3"
+        "foreground": "#ff7edb"
       }
     },
     {

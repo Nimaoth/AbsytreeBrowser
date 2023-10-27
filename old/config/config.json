@@ -1,0 +1,43 @@
+{
+  "theme": "./themes/tokyo-night-storm-color-theme.json",
+  "fontSize": 19.0,
+  "fontRegular": "./fonts/DejaVuSansMono.ttf",
+  "fontBold": "./fonts/DejaVuSansMono-Bold.ttf",
+  "fontItalic": "./fonts/DejaVuSansMono-Oblique.ttf",
+  "fontBoldItalic": "./fonts/DejaVuSansMono-BoldOblique.ttf",
+  "workspaceFolders": [
+    {
+      "kind": 2,
+      "id": "b7ffffff3e9b9a384993a0e6",
+      "name": "GitHub:Nimaoth/Absytree/main",
+      "settings": {
+        "baseUrl": "https://api.github.com/repos/Nimaoth/Absytree",
+        "user": "Nimaoth",
+        "repository": "Absytree",
+        "branchOrHash": "main"
+      }
+    }
+  ],
+  "openEditors": [
+    {
+      "filename": "a.ast",
+      "ast": true,
+      "languageID": "ast",
+      "appFile": false,
+      "workspaceId": "b7ffffff3e9b9a384993a0e6"
+    },
+    {
+      "filename": "a.am",
+      "ast": false,
+      "languageID": "am",
+      "appFile": false,
+      "workspaceId": "b7ffffff3e9b9a384993a0e6"
+    },
+    {
+      "filename": "./config/absytree_config.js",
+      "ast": false,
+      "languageID": "javascript",
+      "appFile": true
+    }
+  ]
+}

@@ -16,14 +16,6 @@
         "repository": "Absytree",
         "branchOrHash": "main"
       }
-    },
-    {
-      "kind": 1,
-      "id": "6400d7ef1d1042b6c7bacf7f",
-      "name": "AbsytreeServer:http://localhost:3000/Absytree",
-      "settings": {
-        "baseUrl": "http://localhost:3000"
-      }
     }
   ],
   "openEditors": [
@@ -32,14 +24,14 @@
       "ast": false,
       "languageID": "am",
       "appFile": false,
-      "workspaceId": "6400d7ef1d1042b6c7bacf7f"
+      "workspaceId": "b7ffffff3e9b9a384993a0e6"
     },
     {
       "filename": "config/default_config.nim",
       "ast": false,
       "languageID": "nim",
       "appFile": false,
-      "workspaceId": "6400d7ef1d1042b6c7bacf7f"
+      "workspaceId": "b7ffffff3e9b9a384993a0e6"
     }
   ]
 }

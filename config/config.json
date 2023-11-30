@@ -1,6 +1,6 @@
 {
   "theme": "./themes/tokyo-night-storm-color-theme.json",
-  "fontSize": 19.0,
+  "fontSize": 16.0,
   "fontRegular": "./fonts/DejaVuSansMono.ttf",
   "fontBold": "./fonts/DejaVuSansMono-Bold.ttf",
   "fontItalic": "./fonts/DejaVuSansMono-Oblique.ttf",

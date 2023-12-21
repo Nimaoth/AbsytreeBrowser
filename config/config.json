@@ -5,6 +5,7 @@
   "fontBold": "./fonts/DejaVuSansMono-Bold.ttf",
   "fontItalic": "./fonts/DejaVuSansMono-Oblique.ttf",
   "fontBoldItalic": "./fonts/DejaVuSansMono-BoldOblique.ttf",
+  "layout": "fibonacci",
   "workspaceFolders": [
     {
       "kind": 2,

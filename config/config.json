@@ -1,6 +1,7 @@
 {
   "theme": "./themes/tokyo-night-color-theme.json",
   "fontSize": 16.0,
+  "lineDistance": 1.0,
   "fontRegular": "./fonts/DejaVuSansMono.ttf",
   "fontBold": "./fonts/DejaVuSansMono-Bold.ttf",
   "fontItalic": "./fonts/DejaVuSansMono-Oblique.ttf",

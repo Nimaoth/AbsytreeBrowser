@@ -1,0 +1,14 @@
+{
+	"Print to console": {
+		"scope": "nim",
+		"prefix": "log",
+		"body": [
+			"log lvl${1:Info} &\"[${TM_FILENAME/(.*)\\..*$/${1:/capitalize}/}] $2\""
+		]
+	},
+	"Create Procedure": {
+		"scope": "nim",
+		"prefix": "proc",
+		"body": [ "proc ${1:name}($2): ${3:returnType} = ${0:discard}"]
+	}
+}

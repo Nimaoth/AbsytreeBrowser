@@ -1,0 +1,47 @@
+{
+  "theme": "./themes/tokyo-night-color-theme.json",
+  "fontSize": 16.0,
+  "lineDistance": 1.0,
+  "fontRegular": "./fonts/DejaVuSansMono.ttf",
+  "fontBold": "./fonts/DejaVuSansMono-Bold.ttf",
+  "fontItalic": "./fonts/DejaVuSansMono-Oblique.ttf",
+  "fontBoldItalic": "./fonts/DejaVuSansMono-BoldOblique.ttf",
+  "layout": "fibonacci",
+  "workspaceFolders": [
+    {
+      "kind": 2,
+      "id": "b7ffffff3e9b9a384993a0e6",
+      "name": "GitHub:Nimaoth/Absytree/main",
+      "settings": {
+        "baseUrl": "https://api.github.com/repos/Nimaoth/Absytree",
+        "user": "Nimaoth",
+        "repository": "Absytree",
+        "branchOrHash": "main"
+      }
+    },
+    {
+      "kind": 1,
+      "id": "6400d7ef1d1042b6c7bacf7f",
+      "name": "AbsytreeServer:http://localhost:3000/Absytree",
+      "settings": {
+        "baseUrl": "http://localhost:3000"
+      }
+    }
+  ],
+  "openEditors": [
+    {
+      "filename": "docs/getting_started.md",
+      "ast": false,
+      "languageID": "markdown",
+      "appFile": false,
+      "workspaceId": "b7ffffff3e9b9a384993a0e6"
+    },
+    {
+      "filename": "config/default_config.nim",
+      "ast": false,
+      "languageID": "nim",
+      "appFile": false,
+      "workspaceId": "b7ffffff3e9b9a384993a0e6"
+    }
+  ]
+}
